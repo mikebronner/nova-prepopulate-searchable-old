@@ -2,17 +2,17 @@
     <default-field :field="field" :errors="errors">
         <template slot="field">
             <search-input
-                v-if="isSearchable && !isLocked && !isReadOnly"
                 :data-testid="`${field.resourceName}-search-input`"
-                @input="performSearch"
-                @clear="clearSelection"
-                @selected="selectResource"
+                :data="availableResources"
                 :error="hasError"
                 :value="selectedResource"
-                :data="availableResources"
-                trackBy="value"
-                searchBy="display"
+                @clear="clearSelection"
+                @input="performSearch"
+                @selected="selectResource"
                 class="mb-3"
+                searchBy="display"
+                trackBy="value"
+                v-if="isSearchable && ! isLocked && ! isReadOnly"
             >
                 <div slot="default" v-if="selectedResource" class="flex items-center">
                     <div v-if="selectedResource.avatar" class="mr-3">

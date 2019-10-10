@@ -1,17 +1,28 @@
 {
-    "name": "alexbowers/nova-prepopulate-searchable",
+    "name": "genealabs/nova-prepopulate-searchable",
     "description": "A tool to allow BelongsTo searchable fields to be pre-populated with data",
     "keywords": [
         "laravel",
         "nova"
     ],
-    "homepage": "https://github.com/alexbowers/nova-prepopulate-searchable",
+    "homepage": "https://github.com/GeneaLabs/nova-prepopulate-searchable",
     "license": "MIT",
     "authors": [
         {
+            "name": "Mike Bronner",
+            "email": "hello@genealabs.com",
+            "role": "developer"
+        },
+        {
             "name": "Alex Bowers",
             "email": "bowersbros@gmail.com",
-            "role": "Developer"
+            "role": "original developer"
+        }
+    ],
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "https://nova.laravel.com"
         }
     ],
     "require": {
@@ -20,13 +31,13 @@
     },
     "autoload": {
         "psr-4": {
-            "AlexBowers\\NovaPrepopulateSearchable\\": "src/"
+            "GeneaLabs\\NovaPrepopulateSearchable\\": "src/"
         }
     },
     "extra": {
         "laravel": {
             "providers": [
-                "AlexBowers\\NovaPrepopulateSearchable\\ToolServiceProvider"
+                "GeneaLabs\\NovaPrepopulateSearchable\\ToolServiceProvider"
             ]
         }
     },
